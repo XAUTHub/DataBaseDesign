@@ -1,0 +1,46 @@
+.settlement {
+    width: 980px;
+    height: 52px;
+    margin: 10px auto 0 auto;
+}
+
+.settlement .ww {
+    float: left;
+    width: 885px;
+    height: 100%;
+    border: 1px solid #f1f1f1;
+    border-right: 0;
+}
+
+.ww #calculate {
+    float: left;
+    height: 100%;
+    line-height: 52px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #E2231A;
+}
+
+.ww .price-sum {
+    float: left;
+    width: 120px;
+    height: 100%;
+    margin-left: 700px;
+    line-height: 52px;
+    font-size: 16px;
+}
+
+.settlement .submit {
+    float: left;
+    width: 94px;
+    height: 100%;
+    background-color: #e54346;
+    
+    line-height: 52px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.submit a {
+    color: #fff;
+}

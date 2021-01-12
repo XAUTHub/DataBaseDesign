@@ -1,0 +1,47 @@
+.bar {
+    width: 990px;
+    height: 32px;
+    margin: 5px auto;
+    background-color: #f3f3f3;
+    line-height: 32px;
+    font-size: 14px;
+    color: #666;
+    border: 1px solid #e9e9e9;
+}
+
+.bar .t-checkbox {
+    float: left;
+    width: 152px;
+}
+
+.t-checkbox .cart-checkbox {
+    float: left;
+    margin-right: 5px;
+}
+
+.bar .t-goods {
+    float: left;
+    width: 238px;
+}
+
+.bar .t-shop {
+    float: left;
+    width: 200px;
+}
+
+.bar .t-price {
+    float: left;
+    width: 120px;
+    /* margin-left: 150px; */
+}
+
+.bar .t-quantity {
+    float: left;
+    width: 100px;
+}
+
+.bar .t-sum {
+    float: left;
+    width: 100px;
+    /* margin-left: 50px; */
+}

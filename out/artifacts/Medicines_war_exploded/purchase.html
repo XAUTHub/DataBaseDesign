@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进货厂</title>
+
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/top.css">
+    <link rel="stylesheet" href="./css/w.css">
+    <link rel="stylesheet" href="./css/bar.css">
+    <link rel="stylesheet" href="./css/item-list.css">
+    <link rel="stylesheet" href="./css/settlement.css">
+    <link rel="stylesheet" href="./css/bottom.css">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="./js/dropdown.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="panel panel-primary">
+
+
+            <div class="bar">
+                <div class="t-checkbox">
+                    <div class="cart-checkbox">
+                        <input type="checkbox" id="allchecked" onclick="setAll()">
+                        <label for></label>
+                    </div>全选</div>
+                <div class="t-goods">商品</div>
+                <div class="t-shop">商家</div>
+                <div class="t-price">单价</div>
+                <div class="t-quantity">数量</div>
+                <div class="t-sum">小计</div>
+                <div class="t-action">操作</div>
+            </div>
+            <div class="item-list" id="item-list">
+
+                <div class="item" id="007">
+                    <div class="p-checkbox">
+                        <input type="checkbox" name="p-radio" ><label for></label>
+                    </div>
+
+                    <div class="p-goods">
+                        <div class="p-img"><img src="./images/1610372829309.jpg"></div>
+                        <div class="p-name">医用外科口罩50片</div><br>
+                        <div class="p-attr">一次性医疗医护三层防护</div>
+                    </div>
+
+                    <div class="p-shop">阿里健康</div>
+
+                    <div class="p-price">￥<span class="onlyPrice">24.9</span></div>
+
+                    <div class="p-quantity">
+                        <input type="button" class="decrease" value="-">
+                        <input type="text" class="quantity" value="1"/>
+                        <input type="button" class="increase" value="+">
+                    </div>
+
+                    <div class="p-sum">￥<span class="onlySum">24.9</span></div>
+
+                    <div class="p-action">
+                        <input type="button" class="deleteItem" value="删除"/>
+                    </div>
+                </div>
+
+                <div class="item" id="002">
+                    <div class="p-checkbox">
+                        <input type="checkbox" name="p-radio" ><label for></label>
+                    </div>
+
+                    <div class="p-goods">
+                        <div class="p-img"><img src="./images/1610372829297.jpg"></div>
+                        <div class="p-name">健胃消食片</div><br>
+                        <div class="p-attr">江中健胃消食片160片</div>
+                    </div>
+
+                    <div class="p-shop">阿里健康</div>
+
+                    <div class="p-price">￥<span class="onlyPrice">35</span></div>
+
+                    <div class="p-quantity">
+                        <input type="button" class="decrease" value="-">
+                        <input type="text" class="quantity" value="1"/>
+                        <input type="button" class="increase" value="+">
+                    </div>
+
+                    <div class="p-sum">￥<span class="onlySum">35</span></div>
+
+                    <div class="p-action">
+                        <input type="button" class="deleteItem" value="删除"/>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="settlement">
+                <div class="ww">
+                    <div id="calculate">结算</div>
+                    <div class="price-sum">
+                        总价：￥<span class="sum-price"></span>
+                    </div>
+                </div>
+
+                <div class="submit">
+                    <a href="javascript:void(0)" id="submit-order">提交订单</a>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div class="link">
+                    <a href="#">查看已完成的订单</a>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.bottom {
+    width: 980px;
+    height: 42px;
+    margin: 15px auto 0 auto;
+}
+
+.bottom .link {
+    float: right;
+    /* margin-left: 760px; */
+}
+
+.link a {
+    font-size: 14px;
+    color: black;
+}
