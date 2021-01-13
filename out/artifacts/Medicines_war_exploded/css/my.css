@@ -1,0 +1,18 @@
+.item .p-quantity {
+    width: 105px;
+    color: #333;
+    font-size: 14px;
+}
+.item .p-sum {
+    width: 105px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+}
+.p-quantity input[type="text"] {
+    width: 40px;
+    height: 18px;
+    text-align: center;
+    border: 1px solid #cacbcb;
+    line-height: 18px;
+}
