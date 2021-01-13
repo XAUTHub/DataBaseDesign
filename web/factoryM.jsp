@@ -73,15 +73,15 @@
                     <%
                         List<Factory> list = (List<Factory>) request.getAttribute("list");
                         if(list == null || list.size()<1){
-                            PrintWriter writer = response.getWriter();
-                            writer.print("没有数据");
-                            writer.flush();
-                            writer.close();
+//                            PrintWriter writer = response.getWriter();
+//                            writer.print("没有数据");
+//                            writer.flush();
+//                            writer.close();
                         }else {
                             for (Factory factory : list){
                     %>
 
-                    <tr id="medicine_list">
+                    <tr id="<%=factory.getMed_identify()%>">
                         <%--<td><img src="<%=storage.getImg_url()%>" style="width: 40px;"></td>--%>
                         <td><%=factory.getFac_name()%></td>
                         <td><%=factory.getMed_identify()%></td>
