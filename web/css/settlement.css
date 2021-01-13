@@ -5,7 +5,7 @@
 }
 
 .settlement .ww {
-    float: left;
+
     width: 885px;
     height: 100%;
     border: 1px solid #f1f1f1;
@@ -13,7 +13,7 @@
 }
 
 .ww #calculate {
-    float: left;
+
     height: 100%;
     line-height: 52px;
     font-weight: 700;
@@ -22,7 +22,7 @@
 }
 
 .ww .price-sum {
-    float: left;
+
     width: 120px;
     height: 100%;
     margin-left: 700px;
@@ -31,7 +31,7 @@
 }
 
 .settlement .submit {
-    float: left;
+
     width: 94px;
     height: 100%;
     background-color: #e54346;

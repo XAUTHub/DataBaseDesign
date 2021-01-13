@@ -8,6 +8,7 @@ public class JDBCUtiles {
     private static Statement stat = null;
     private static PreparedStatement ps = null;
     private static ResultSet rs = null;
+    private static ResultSet rss = null;
     private static int rows = 0;
 
 
@@ -34,6 +35,17 @@ public class JDBCUtiles {
             e.printStackTrace();
         }
         return rs;
+    }
+
+    public static ResultSet queryTwo(String sql){
+        try{
+            conn = getConnection();//获得一个连接的对象
+            stat = conn.createStatement();//向数据库发送sql语句
+            rss = stat.executeQuery(sql);//获得查询结果，返回Resultset对象
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return rss;
     }
 
     public static void add(String sql){

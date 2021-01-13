@@ -32,12 +32,16 @@
                 <li class="active"><a href="#">概览</a></li>
                 <li><a href="${pageContext.request.contextPath}/infoServlet">药品信息</a></li>
                 <li><a href="${pageContext.request.contextPath}/resposityServlet">仓库</a></li>
-                <li><a href="http://v3.bootcss.com/examples/dashboard/#">生产厂家</a></li>
+                <li><a href="${pageContext.request.contextPath}/factoryServlet">生产厂家</a></li>
             </ul>
             <ul class="nav nav-sidebar">
-                <li><a href="http://v3.bootcss.com/examples/dashboard/">入库单/进货单</a></li>
-                <li><a href="http://v3.bootcss.com/examples/dashboard/">销售记录单/出库单</a></li>
-                <li><a href="http://v3.bootcss.com/examples/dashboard/">药品商城</a></li>
+                <li><a href="${pageContext.request.contextPath}/inServlet">进货单</a></li>
+                <li><a href="${pageContext.request.contextPath}/outServlet">销售单</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="${pageContext.request.contextPath}/inMoreServlet">进货明细</a></li>
+                <li><a href="${pageContext.request.contextPath}/outMoreServlet">销售明细</a></li>
+                <li><a href="${pageContext.request.contextPath}/clientServlet">客户</a></li>
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

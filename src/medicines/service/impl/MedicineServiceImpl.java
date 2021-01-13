@@ -40,4 +40,34 @@ public class MedicineServiceImpl implements MedicineService {
     public void showResposity(HttpServletRequest request, HttpServletResponse response) {
         dao.showResposity(request,response);
     }
+
+    @Override
+    public void showFactory(HttpServletRequest request, HttpServletResponse response) {
+        dao.showFactory(request,response);
+    }
+
+    @Override
+    public void showIn(HttpServletRequest request, HttpServletResponse response) {
+        dao.showIn(request,response);
+    }
+
+    @Override
+    public void showOut(HttpServletRequest request, HttpServletResponse response) {
+        dao.showOut(request,response);
+    }
+
+    @Override
+    public void showInMore(HttpServletRequest request, HttpServletResponse response) {
+        dao.showInMore(request,response);
+    }
+
+    @Override
+    public void showOutMore(HttpServletRequest request, HttpServletResponse response) {
+        dao.showOutMore(request,response);
+    }
+
+    @Override
+    public void showClient(HttpServletRequest request, HttpServletResponse response) {
+        dao.showClient(request,response);
+    }
 }
