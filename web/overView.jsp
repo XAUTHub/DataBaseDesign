@@ -29,8 +29,8 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="http://v3.bootcss.com/examples/dashboard/#">概览</a></li>
-                <li><a href="http://v3.bootcss.com/examples/dashboard/#">药品信息总览</a></li>
+                <li class="active"><a href="#">概览</a></li>
+                <li><a href="${pageContext.request.contextPath}/infoServlet">药品信息总览</a></li>
                 <li><a href="http://v3.bootcss.com/examples/dashboard/#">仓库/库存</a></li>
                 <li><a href="http://v3.bootcss.com/examples/dashboard/#">供应商</a></li>
             </ul>

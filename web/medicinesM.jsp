@@ -1,4 +1,6 @@
-<%--
+<%@ page import="medicines.domain.Medicine" %>
+<%@ page import="java.io.PrintWriter" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2021/1/12
@@ -50,9 +52,8 @@
             <h2 class="sub-header">药品信息</h2>
             <div class="table-responsive">
                 <table class="table table-striped">
-                    <thead>
                     <tr>
-                        <th>序号</th>
+                        <%--<th>序号</th>--%>
                         <th>名称</th>
                         <th>编号</th>
                         <th>分类</th>
@@ -60,42 +61,38 @@
                         <th>进价</th>
                         <th>售价</th>
                         <th>折扣</th>
-                        <th>有效期</th>
-                        <th>操作</th>
+                        <th>有效期（单位：月）</th>
                     </tr>
-                    </thead>
-                    <tbody id="medicine_list">
+                    <%
+                        List<Medicine> list = (List<Medicine>) request.getAttribute("list");
+                        if(list == null || list.size()<1){
+                            PrintWriter writer = response.getWriter();
+                            writer.print("没有数据");
+                            writer.flush();
+                            writer.close();
+                        }else {
+                            for (Medicine medicine : list){
+                    %>
 
-                    </tbody>
+                    <tr id="medicine_list">
+                        <td><%=medicine.getMed_name()%></td>
+                        <td><%=medicine.getMed_id()%></td>
+                        <td><%=medicine.getMde_class()%></td>
+                        <td><%=medicine.getFactor()%></td>
+                        <td><%=medicine.getPurchase_price()%></td>
+                        <td><%=medicine.getSale_price()%></td>
+                        <td><%=medicine.getDiscount()%></td>
+                        <td><%=medicine.getValidity()%></td>
+                    </tr>
+                    <%
+                        }
+                    }
+                    %>
                 </table>
             </div>
         </div>
     </div>
 </div>
-<script>
-    $(document).ready(function () {
-        $.getJSON("infoServlet", function (result) {
-            console.log("result: "+result);
-            var mhtml = "";
-            alert("success");
-            $.each(result, function (i, field) {
-                mhtml += "<tr>"
-                mhtml += "<td>" + (i+1) + "</td>";
-                mhtml += "<td>" + field.med_name + "</td>";
-                mhtml += "<td>" + field.med_id + "</td>";
-                mhtml += "<td>" + field.med_class + "</td>";
-                mhtml += "<td>" + field.factor + "</td>";
-                mhtml += "<td>" + field.purchase_price + "</td>";
-                mhtml += "<td>" + field.sale_price + "</td>";
-                mhtml += "<td>" + field.discount + "</td>";
-                mhtml += "<td>" + field.validity + "</td>";
-                mhtml += "<td><button type='button' class='btn btn-primary btn-ns' onclick='showEdit(" + field.id +")'>编辑</button><button type='button' class='btn btn-danger btn-ns'>删除</button></td>";
-                mhtml += "</tr>"
-            })
-            $("#medicine_list").html(mhtml);
-        })
-    })
-</script>
 
 <script src="./Dashboard Template for Bootstrap_files/jquery.min.js"></script>
 <script src="./Dashboard Template for Bootstrap_files/bootstrap.min.js"></script>
