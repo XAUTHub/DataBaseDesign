@@ -4,7 +4,7 @@ public class Factory {
     private String fac_name;
     private String med_identify;
     private String production_date;
-    private int purchase_price; //进价
+    private int purchase_price; //进价****************************************
 
     public int getPurchase_price() {
         return purchase_price;
