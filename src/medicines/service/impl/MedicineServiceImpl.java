@@ -35,4 +35,9 @@ public class MedicineServiceImpl implements MedicineService {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public void showResposity(HttpServletRequest request, HttpServletResponse response) {
+        dao.showResposity(request,response);
+    }
 }

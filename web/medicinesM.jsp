@@ -32,9 +32,9 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li><a href="#">总览</a></li>
-                <li class="active"><a href="./medicines.html">药品信息<span class="sr-only">(current)</span></a></li>
-                <li><a href="./resposity.html">仓库</a></li>
+                <li><a href="${pageContext.request.contextPath}/overView.jsp">概览</a></li>
+                <li class="active"><a href="#">药品信息<span class="sr-only">(current)</span></a></li>
+                <li><a href="${pageContext.request.contextPath}/resposityServlet">仓库</a></li>
                 <li><a href="./factory.html">生产厂家</a></li>
             </ul>
             <ul class="nav nav-sidebar">
@@ -54,6 +54,7 @@
                 <table class="table table-striped">
                     <tr>
                         <%--<th>序号</th>--%>
+                        <th>图片</th>
                         <th>名称</th>
                         <th>编号</th>
                         <th>分类</th>
@@ -75,6 +76,7 @@
                     %>
 
                     <tr id="medicine_list">
+                        <td><img src="<%=medicine.getImg_url()%>" style="width: 40px;"></td>
                         <td><%=medicine.getMed_name()%></td>
                         <td><%=medicine.getMed_id()%></td>
                         <td><%=medicine.getMde_class()%></td>

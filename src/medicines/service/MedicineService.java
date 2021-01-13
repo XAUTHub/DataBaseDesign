@@ -7,4 +7,6 @@ public interface MedicineService {
     void showMedicineInfo(HttpServletRequest request, HttpServletResponse response);
 
     void login(HttpServletRequest request, HttpServletResponse response);
+
+    void showResposity(HttpServletRequest request, HttpServletResponse response);
 }
